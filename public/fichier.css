@@ -1,0 +1,71 @@
+#cy {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 400;
+  right: 0;
+  bottom: 0;
+}
+ /* Sidebar Styles */
+  
+ #sidebar {
+  z-index: 1000;
+  left: 250px;
+  width: 20%;
+  height: 100vh;
+  overflow-y: auto;
+  background: #063146;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+#sidebar header {
+  background-color: #063146;
+  font-size: 20px;
+  line-height: 52px;
+  text-align: center;
+}
+
+#sidebar header a {
+  color: #fff;
+  display: block;
+  text-decoration: none;
+}
+
+#sidebar header a:hover {
+  color: #fff;
+}
+#sidebar ul {
+  padding:0;
+}
+#sidebar ul li {
+    width: 100%;
+    list-style:none;
+}
+#sidebar ul li button{
+    width: 100%;
+    
+    background: #042331;
+    color: white;
+    line-height: 65px;
+  font-size: 20px;
+  color: white;
+ 
+  border-bottom: 1px solid black;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  transition: 0.4s;
+  border-left: none;
+  margin:0px;
+  transition: 0.4s;
+}
+#sidebar ul li input{
+width: 99%;
+height: 50px;
+}
+#sidebar ul li button:hover{
+    padding-left: 20px;
+}
+
+

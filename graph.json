@@ -1,0 +1,127 @@
+let graph2 = [
+  { group:'nodes', data: { id: 'G1',label: 'noeud 1', title: 'bdd'
+    }
+  },
+  { group:'nodes', data: { id: 'G11',label: 'noeud 2', title: 'introduction'
+    }
+  },
+  { group:'nodes', data: { id: 'G12', label: 'noeud 3',title: 'installation'
+    }
+  },
+  { group:'nodes', data: { id: 'G13',label: 'noeud 4', title: 'LCD'
+    }
+  },
+  { group:'nodes', data: { id: 'G14',label: 'noeud 5', title: 'LMD'
+    }
+  },
+  { group:'nodes', data: { id: 'G15', label: 'noeud 6',title: 'LID'
+    }
+  },
+  { group:'nodes', data: { id: 'G16',label: 'noeud 7', title: 'algèbre'
+    }
+  },
+  { group:'nodes', data: { id: 'G17', label: 'noeud 8',title: 'synthèse'
+    }
+  },
+  { group:'nodes', data: { id: 'N111',label: 'noeud 9', title: 'si et bdd', content: 'introduction aux systèmes d\'information et aux bases de données', urlContent: ['http: //'], urlEvaluation: 'http://', read: 'read', eval: '', parent: 'G11'}},
+        { group:'nodes', data: { id: 'N112',label: 'noeud 10', title: 'clés primaires', content: 'Le concept de clé primaire dans les bases de données relationnelles', urlContent: ['http: //'], urlEvaluation: 'http://', read: 'read', eval: '', content: '', urlContent: ['http://'], urlEvaluation: 'http://', read: 'read', eval: '', parent: 'G11'}},
+              { group:'nodes', data: { id: 'N113', label: 'noeud 11',title: 'clés étrangères', content: 'Le concept de clé étrangère dans les bases de données relationnelles', urlContent: ['http: //'], urlEvaluation: 'http://', read: 'read', eval: '', parent: 'G11'}},
+                    { group:'nodes', data: { id: 'N121',label: 'noeud 12', title: 'postgresql maison', content: 'Installation de postgresql et pgadmin', urlContent: ['http: //'], urlEvaluation: 'http://', read: 'read', eval: '', parent: 'G12'}},
+                          { group:'nodes', data: { id: 'N122',label: 'noeud 13', title: 'postgresql vm', content: 'Installation de vmware horizon client pour utilisation des machines virtuelles de l\'université', urlContent: ['http: //'], urlEvaluation: 'http://', read: 'read', eval: '', parent: 'G12'}},
+                                { group:'nodes', data: { id: 'N131',label: 'noeud 14',label: 'noeud 1',label: 'noeud 1', title: 'types', content: 'Les principaux types de données en SQL et quand les utiliser', urlContent: ['http: //'], urlEvaluation: 'http://', read: 'read', eval: '', parent: 'G13'}},
+                                      { group:'nodes', data: { id: 'N132',label: 'noeud 15', title: 'create table', content: 'Syntaxe de création d\'une table en SQL', urlContent: ['http: //'], urlEvaluation: 'http://', read: 'read', eval: '', parent: 'G13'}},
+                                            { group:'nodes', data: { id: 'N133',label: 'noeud 16', title: 'contraintes', content: 'Les contraintes de colonnes et de tables en SQL', urlContent: ['http: //'], urlEvaluation: 'http://', read: 'read', eval: '', parent: 'G13'}},
+                                                  { group:'nodes', data: { id: 'N134',label: 'noeud 17', title: 'alter table', content: 'Syntaxe de modification d\'une table en SQL', urlContent: ['http: //'], urlEvaluation: 'http://', read: 'read', eval: '', parent: 'G13'}},
+                                                        { group:'nodes', data: { id: 'N141', label: 'noeud 18',title: 'insert', content: 'Insertion de lignes en SQL dans une base de données', urlContent: ['http: //'], urlEvaluation: 'http://', read: 'read', eval: '', parent: 'G14'}},
+                                                              { group:'nodes', data: { id: 'N142', label: 'noeud 19',title: 'update', content: 'Modification de lignes en SQL dans une base de données', urlContent: ['http: //'], urlEvaluation: 'http://', read: 'read', eval: '', parent: 'G14'}},
+                                                                    { group:'nodes', data: { id: 'N143',label: 'noeud 20', title: 'delete', content: 'Suppression de lignes en SQL dans une base de données', urlContent: ['http: //'], urlEvaluation: 'http://', read: 'read', eval: '', parent: 'G14'}},
+                                                                          { group:'nodes', data: { id: 'N151',label: 'noeud 21', title: 'select from where', content: 'Les principes de base de l\'extraction de données en SQL dans une base relationnelle', urlContent: ['http: //'], urlEvaluation: 'http://', read: 'read', eval: '', parent: 'G15'}},
+                                                                                { group:'nodes', data: { id: 'N152', label: 'noeud 22',title: 'join', content: 'Récupérer des données venant de deux tables ou plus en SQL', urlContent: ['http: //'], urlEvaluation: 'http://', read: 'read', eval: '', parent: 'G15'}},
+                                                                                      { group:'nodes', data: { id: 'N153',label: 'noeud 23', title: 'outer join', content: 'Jointures externes', urlContent: ['http: //'], urlEvaluation: 'http://', read: 'read', eval: '', parent: 'G15'}},
+                                                                                            { group:'nodes', data: { id: 'N154',label: 'noeud 23', title: 'group by', content: 'Agrégation et calculs en SQL', urlContent: ['http: //'], urlEvaluation: 'http://', read: 'read', eval: '', parent: 'G15'}},
+                                                                                                  { group:'nodes', data: { id: 'N155', label: 'noeud 24',title: 'having', content: 'Filtrage de groupes en SQL', urlContent: ['http: //'], urlEvaluation: 'http://', read: 'read', eval: '', parent: 'G15'}},
+                                                                                                        { group:'nodes', data: { id: 'N156',label: 'noeud 25', title: 'union except', content: 'Union et intersections de plusieurs requêtes en SQL', urlContent: ['http: //'], urlEvaluation: 'http://', read: 'read', eval: '', parent: 'G15'}},
+                                                                                                              { group:'nodes', data: { id: 'N157',label: 'noeud 26', title: 'order by limit', content: 'Trier ou limiter les résultats d\'une requête SQL', urlContent: ['http: //'], urlEvaluation: 'http://', read: 'read', eval: '', parent: 'G15'}},
+                                                                                                                    { group:'nodes', data: { id: 'N158',label: 'noeud 27', title: 'exécution', content: 'Principe général de l\'exécution d\'une requête SQL', urlContent: ['http: //'], urlEvaluation: 'http://', read: 'read', eval: '', parent: 'G15'}},
+                                                                                                                          { group:'edges', data: { id: 'e0', source: 'G11', target: 'G12'
+                                                                                                                            }
+                                                                                                                          },
+                                                                                                                          { group:'edges', data: { id: 'e1', source: 'G11', target: 'G13'
+                                                                                                                            }
+                                                                                                                          },
+                                                                                                                          { group:'edges', data: { id: 'e2', source: 'G11', target: 'G14'
+                                                                                                                            }
+                                                                                                                          },
+                                                                                                                          { group:'edges', data: { id: 'e3', source: 'G11', target: 'G15'
+                                                                                                                            }
+                                                                                                                          },
+                                                                                                                          { group:'edges', data: { id: 'e4', source: 'G11', target: 'G16'
+                                                                                                                            }
+                                                                                                                          },
+                                                                                                                          { group:'edges', data: { id: 'e5', source: 'G16', target: 'G15'
+                                                                                                                            }
+                                                                                                                          },
+                                                                                                                          { group:'edges', data: { id: 'e6', source: 'G13', target: 'G17'
+                                                                                                                            }
+                                                                                                                          },
+                                                                                                                          { group:'edges', data: { id: 'e7', source: 'G14', target: 'G17'
+                                                                                                                            }
+                                                                                                                          },
+                                                                                                                          { group:'edges', data: { id: 'e8', source: 'G15', target: 'G17'
+                                                                                                                            }
+                                                                                                                          },
+                                                                                                                          { group:'edges', data: { id: 'e9', source: 'N111', target: 'N112'
+                                                                                                                            }
+                                                                                                                          },
+                                                                                                                          { group:'edges', data: { id: 'e10', source: 'N112', target: 'N113'
+                                                                                                                            }
+                                                                                                                          },
+                                                                                                                          { group:'edges', data: { id: 'e11', source: 'N131', target: 'N132'
+                                                                                                                            }
+                                                                                                                          },
+                                                                                                                          { group:'edges', data: { id: 'e12', source: 'N132', target: 'N133'
+                                                                                                                            }
+                                                                                                                          },
+                                                                                                                          { group:'edges', data: { id: 'e13', source: 'N133', target: 'N134'
+                                                                                                                            }
+                                                                                                                          },
+                                                                                                                          { group:'edges', data: { id: 'e14', source: 'N141', target: 'N142'
+                                                                                                                            }
+                                                                                                                          },
+                                                                                                                          { group:'edges', data: { id: 'e15', source: 'N142', target: 'N143'
+                                                                                                                            }
+                                                                                                                          },
+                                                                                                                          { group:'edges', data: { id: 'e16', source: 'N151', target: 'N152'
+                                                                                                                            }
+                                                                                                                          },
+                                                                                                                          { group:'edges', data: { id: 'e17', source: 'N152', target: 'N153'
+                                                                                                                            }
+                                                                                                                          },
+                                                                                                                          { group:'edges', data: { id: 'e18', source: 'N151', target: 'N154'
+                                                                                                                            }
+                                                                                                                          },
+                                                                                                                          { group:'edges', data: { id: 'e19', source: 'N154', target: 'N155'
+                                                                                                                            }
+                                                                                                                          },
+                                                                                                                          { group:'edges', data: { id: 'e20', source: 'N151', target: 'N156'
+                                                                                                                            }
+                                                                                                                          },
+                                                                                                                          { group:'edges', data: { id: 'e21', source: 'N151', target: 'N157'
+                                                                                                                            }
+                                                                                                                          },
+                                                                                                                          { group:'edges', data: { id: 'e22', source: 'N153', target: 'N158'
+                                                                                                                            }
+                                                                                                                          },
+                                                                                                                          { group:'edges', data: { id: 'e23', source: 'N155', target: 'N158'
+                                                                                                                            }
+                                                                                                                          },
+                                                                                                                          { group:'edges', data: { id: 'e24', source: 'N156', target: 'N158'
+                                                                                                                            }
+                                                                                                                          },
+                                                                                                                          { group:'edges', data: { id: 'e25', source: 'N157', target: 'N158'
+                                                                                                                            }
+                                                                                                                          }
+                                                                                                                        ];
+    
+    
+    

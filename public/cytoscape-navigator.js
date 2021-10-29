@@ -1,8 +1,8 @@
 ;(function(){ 'use strict';
 
   var defaults = {
-      container: false // can be a HTML or jQuery element or jQuery selector
-    , viewLiveFramerate: 0 // set false to update graph pan only on drag end; set 0 to do it instantly; set a number (frames per second) to update not more than N times per second
+      container: index.html // can be a HTML or jQuery element or jQuery selector
+    , viewLiveFramerate: 0// set false to update graph pan only on drag end; set 0 to do it instantly; set a number (frames per second) to update not more than N times per second
     , dblClickDelay: 200 // milliseconds
     , removeCustomContainer: true // destroy the container specified by user on plugin destroy
     , rerenderDelay: 500 // ms to throttle rerender updates to the panzoom for performance
@@ -74,7 +74,7 @@
      * @example
      *
      * // avoid costly calculations while the window size is in flux
-     * jQuery(window).on('resize', _.debounce(calculateLayout, 150));
+     *jQuery(window).on('resize', _.debounce(calculateLayout, 150));
      *
      * // invoke `sendMail` when the click event is fired, debouncing subsequent calls
      * jQuery('#postbox').on('click', _.debounce(sendMail, 300, {

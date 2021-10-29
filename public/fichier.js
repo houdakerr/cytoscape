@@ -58,8 +58,10 @@ let style = [{
 }, {
     'selector': 'edge',
     'style': {
-
-        'curve-style': 'bezier',
+        'curve-style': 'taxi',
+        'taxi-direction': auto,
+        'taxi turn': '20 px',
+        
         'opacity': 0.666,
         'width': 4,
         //arc oriente
@@ -83,6 +85,12 @@ let style = [{
         'text-opacity': 0
     }
 }];
+
+
+//fonction chargement 
+
+    ////fin de la fct
+//fonction 2
 
 var cy = Window.cy = cytoscape({
     container: document.getElementById("cy"),
@@ -209,13 +217,13 @@ remove.addEventListener("click", event => {
 
 
 
-$('.saveDiagram').click(function () {
+$('#validate').click(function () {
     eh.hide();
     var diagramJson = cy.json();
     console.log(diagramJson)
 
     var formattedData = JSON.stringify(diagramJson.elements, null, '\t').replace(/"([^"]*)":/g, '$1:');
-    /*console.log(diagramJson.elements)*/
+    console.log(diagramJson.elements)
     $('.savedJson').text(formattedData);
 });
 
@@ -236,7 +244,7 @@ redo.addEventListener("click", event => {
     ur.redo();
 });
 
-validate.addEventListener("click", event => {
+/*validate.addEventListener("click", event => {
     console.log('hasCycles', hasCycles(cy.elements()));
 });
 
@@ -258,5 +266,24 @@ function hasCycles(elements) {
     return bfs.found.length !== 0;
 }
  
+*/
+//code ens
 
+document.addEventListener('DOMContentLoaded', function() { // on dom ready
+    var toJson = function(res){ return res.json(); };
 
+    var cy = cytoscape({
+        container: document.querySelector('#cy'),
+        
+        layout: {
+            name: 'dagre',
+            rankDir: 'LR',
+            fit:true
+        },
+        
+        style: style, //fetch('cy-style.json').then(toJson),
+        
+        elements: graph ,
+		elements: json2Elements(doc),
+		elements: fetch('http://vps-e9e90ee3.vps.ovh.net:5000/lecons_detail').then(toJson)
+    });})

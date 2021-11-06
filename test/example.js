@@ -5,6 +5,3 @@ describe('This', function(){
     expect( true ).to.be.true;
   });
 });
-
-
-

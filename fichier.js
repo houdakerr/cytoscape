@@ -250,50 +250,48 @@ document.addEventListener('DOMContentLoaded', function () {
 
 });
 
-
 /*barre de navigation*/
 
-  let sidebar = document.querySelector(".sidebar");
-  let closeBtn = document.querySelector("#btn");
-  let searchBtn = document.querySelector(".bx-search");
-  let addBtn = document.querySelector(".bx-plus-circle");
-  let edgeBtn = document.querySelector(".bxs-network-chart");
-  let delateBtn = document.querySelector(".bx-trash");
-  let editBtn = document.querySelector(".bxs-edit");
+let sidebar = document.querySelector(".sidebar");
+let closeBtn = document.querySelector("#btn");
+let searchBtn = document.querySelector(".bx-search");
+let addBtn = document.querySelector(".bx-plus-circle");
+let edgeBtn = document.querySelector(".bxs-network-chart");
+let delateBtn = document.querySelector(".bx-trash");
+let editBtn = document.querySelector(".bxs-edit");
 
-  closeBtn.addEventListener("click", ()=>{
-    sidebar.classList.toggle("open");
-    menuBtnChange();//calling the function(optional)
-  });
+closeBtn.addEventListener("click", ()=>{
+  sidebar.classList.toggle("open");
+  menuBtnChange();//calling the function(optional)
+});
 
-  searchBtn.addEventListener("click", ()=>{ // Sidebar open when you click on the search iocn
-    sidebar.classList.toggle("open");
-    menuBtnChange(); //calling the function(optional)
-  });
-  /*
-  addBtn.addEventListener("click", ()=>{ // Sidebar open when you click on the plus iocn
-    sidebar.classList.toggle("open");
-    menuBtnChange(); //calling the function(optional)
-  });
-  edgeBtn.addEventListener("click", ()=>{ // Sidebar open when you click on the network  iocn
-    sidebar.classList.toggle("open");
-    menuBtnChange(); //calling the function(optional)
-  });
-  delateBtn.addEventListener("click", ()=>{ // Sidebar open when you click on the trach iocn
-    sidebar.classList.toggle("open");
-    menuBtnChange(); //calling the function(optional)
-  });
-  editBtn.addEventListener("click", ()=>{ // Sidebar open when you click on the edit iocn
-    sidebar.classList.toggle("open");
-    menuBtnChange(); //calling the function(optional)
-  });
+searchBtn.addEventListener("click", ()=>{ // Sidebar open when you click on the search iocn
+  sidebar.classList.toggle("open");
+  menuBtnChange(); //calling the function(optional)
+});
+/*
+addBtn.addEventListener("click", ()=>{ // Sidebar open when you click on the plus iocn
+  sidebar.classList.toggle("open");
+  menuBtnChange(); //calling the function(optional)
+});
+edgeBtn.addEventListener("click", ()=>{ // Sidebar open when you click on the network  iocn
+  sidebar.classList.toggle("open");
+  menuBtnChange(); //calling the function(optional)
+});
+delateBtn.addEventListener("click", ()=>{ // Sidebar open when you click on the trach iocn
+  sidebar.classList.toggle("open");
+  menuBtnChange(); //calling the function(optional)
+});
+editBtn.addEventListener("click", ()=>{ // Sidebar open when you click on the edit iocn
+  sidebar.classList.toggle("open");
+  menuBtnChange(); //calling the function(optional)
+});
 */
-  // following are the code to change sidebar button(optional)
-  function menuBtnChange() {
-   if(sidebar.classList.contains("open")){
-     closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");//replacing the iocns class
-   }else {
-     closeBtn.classList.replace("bx-menu-alt-right","bx-menu");//replacing the iocns class
-   }
-  }
-  
+// following are the code to change sidebar button(optional)
+function menuBtnChange() {
+ if(sidebar.classList.contains("open")){
+   closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");//replacing the iocns class
+ }else {
+   closeBtn.classList.replace("bx-menu-alt-right","bx-menu");//replacing the iocns class
+ }
+}

@@ -121,6 +121,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 event.target.unselect();
 
             } else {
+
                 connectSource = event.target;
             }
         } else {

@@ -1,0 +1,81 @@
+{
+  "_from": "cytoscape-compound-drag-and-drop",
+  "_id": "cytoscape-compound-drag-and-drop@1.0.0",
+  "_inBundle": false,
+  "_integrity": "sha512-JbRR3+jrVd89l9k04L/YEKw9pFSc5gfQnGcAoDUGeJVe/6gMzQhBLWlytspGc95l8+45jlRERZt7tG1CsQ0GCQ==",
+  "_location": "/cytoscape-compound-drag-and-drop",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "cytoscape-compound-drag-and-drop",
+    "name": "cytoscape-compound-drag-and-drop",
+    "escapedName": "cytoscape-compound-drag-and-drop",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/cytoscape-compound-drag-and-drop/-/cytoscape-compound-drag-and-drop-1.0.0.tgz",
+  "_shasum": "19bafe2b804d8275d8dae89724597e7de5bf5fd0",
+  "_spec": "cytoscape-compound-drag-and-drop",
+  "_where": "/home/habibou/Bureau/notre projet",
+  "author": {
+    "name": "Max Franz",
+    "email": "maxkfranz@gmail.com"
+  },
+  "bugs": {
+    "url": "https://github.com/cytoscape/cytoscape.js-compound-drag-and-drop/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {},
+  "deprecated": false,
+  "description": "Drag-and-drop UI for creating and editing the children of compound parent nodes",
+  "devDependencies": {
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-preset-env": "^1.5.1",
+    "camelcase": "^4.1.0",
+    "chai": "4.0.2",
+    "cpy-cli": "^1.0.1",
+    "cross-env": "^5.0.0",
+    "eslint": "^3.9.1",
+    "gh-pages": "^1.0.0",
+    "mocha": "^5.2.0",
+    "npm-run-all": "^4.1.2",
+    "rimraf": "^2.6.2",
+    "update": "^0.7.4",
+    "updater-license": "^1.0.0",
+    "webpack": "^2.6.1"
+  },
+  "homepage": "https://github.com/cytoscape/cytoscape.js-compound-drag-and-drop",
+  "keywords": [
+    "cytoscape",
+    "cytoscape-extension"
+  ],
+  "license": "MIT",
+  "main": "cytoscape-compound-drag-and-drop.js",
+  "name": "cytoscape-compound-drag-and-drop",
+  "peerDependencies": {
+    "cytoscape": "^3.4.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cytoscape/cytoscape.js-compound-drag-and-drop.git"
+  },
+  "scripts": {
+    "build": "cross-env NODE_ENV=production webpack",
+    "build:min": "cross-env NODE_ENV=production MIN=true webpack",
+    "build:release": "run-s build copyright",
+    "copyright": "update license",
+    "gh-pages": "gh-pages -d pages",
+    "lint": "eslint src",
+    "postpublish": "run-s gh-pages",
+    "test": "mocha",
+    "watch": "webpack --progress --watch"
+  },
+  "version": "1.0.0"
+}

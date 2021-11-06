@@ -8,6 +8,9 @@ var addActivated = false;
 var connectActivated = false;
 var connectSource = null;
 
+// Get the modal
+var modal = document.getElementById("madiv");
+
 var bouttonModif = document.createElement("input");
 bouttonModif.setAttribute('type', 'button');
 bouttonModif.setAttribute('id', 'Soumettre');
@@ -172,14 +175,15 @@ document.addEventListener('DOMContentLoaded', function () {
                 input.setAttribute('value', valeurs[i]);
                 input.setAttribute('class', 'input');
 
-                var parent = document.getElementById("madiv");
-                parent.appendChild(elem2);
+                //  var parent = document.getElementById("madiv");
+                modal.appendChild(elem2);
 
-                parent.appendChild(input);
+                modal.appendChild(input);
             }
 
-            var parent = document.getElementById("madiv");
-            parent.appendChild(bouttonModif);
+            modal.appendChild(bouttonModif);
+            // Si on clique sur modifier le modal s'ouvre
+            modal.style.display = "block";
 
 
 
@@ -190,6 +194,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     });
 
+    // Si on clique sur enregistrer les modifications le modal se ferme
+
     bouttonModif.addEventListener("click", event => {
         const cles = Object.keys(selected.data());
         for (var i = 0; i < cles.length; i++) {
@@ -197,11 +203,13 @@ document.addEventListener('DOMContentLoaded', function () {
             selected.data(cles[i], document.getElementById(cles[i]).value);
         }
 
-        MaDiv = document.getElementById("madiv");
-        while (MaDiv.firstChild) {
-            MaDiv.removeChild(MaDiv.firstChild);
-        }
         selected = null;
+        modal.style.display = "none";
+        while (modal.firstChild) {
+            modal.removeChild(modal.firstChild);
+        }
+
+
     });
     //fin Modification
     //regroupement
@@ -260,14 +268,14 @@ let edgeBtn = document.querySelector(".bxs-network-chart");
 let delateBtn = document.querySelector(".bx-trash");
 let editBtn = document.querySelector(".bxs-edit");
 
-closeBtn.addEventListener("click", ()=>{
-  sidebar.classList.toggle("open");
-  menuBtnChange();//calling the function(optional)
+closeBtn.addEventListener("click", () => {
+    sidebar.classList.toggle("open");
+    menuBtnChange();//calling the function(optional)
 });
 
-searchBtn.addEventListener("click", ()=>{ // Sidebar open when you click on the search iocn
-  sidebar.classList.toggle("open");
-  menuBtnChange(); //calling the function(optional)
+searchBtn.addEventListener("click", () => { // Sidebar open when you click on the search iocn
+    sidebar.classList.toggle("open");
+    menuBtnChange(); //calling the function(optional)
 });
 /*
 addBtn.addEventListener("click", ()=>{ // Sidebar open when you click on the plus iocn
@@ -289,9 +297,9 @@ editBtn.addEventListener("click", ()=>{ // Sidebar open when you click on the ed
 */
 // following are the code to change sidebar button(optional)
 function menuBtnChange() {
- if(sidebar.classList.contains("open")){
-   closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");//replacing the iocns class
- }else {
-   closeBtn.classList.replace("bx-menu-alt-right","bx-menu");//replacing the iocns class
- }
+    if (sidebar.classList.contains("open")) {
+        closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");//replacing the iocns class
+    } else {
+        closeBtn.classList.replace("bx-menu-alt-right", "bx-menu");//replacing the iocns class
+    }
 }

@@ -146,7 +146,7 @@ document.addEventListener('DOMContentLoaded', function () {
             cy.remove(selected);
         }
     });
-
+/*
 
     cy.on("select", function (event) {
         if (selected === null) return;
@@ -157,7 +157,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
     });
-
+*/
     //editer
     edit.addEventListener("click", event => {
 

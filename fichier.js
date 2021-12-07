@@ -7,14 +7,22 @@ var selected = null;
 var addActivated = false;
 var connectActivated = false;
 var connectSource = null;
+var v= false;
+//var modiefier = document.getElementsByClassName('item');
 
 // Get the modal
 var modal = document.getElementById("madiv");
-
+var span = document.getElementsByClassName("close")[0];
 var bouttonModif = document.createElement("input");
+//span.setAttribute('type', 'span');
+//span.setAttribute('class', 'close');
 bouttonModif.setAttribute('type', 'button');
-bouttonModif.setAttribute('id', 'Soumettre');
+bouttonModif.setAttribute('id', 'soumettre');
 bouttonModif.setAttribute('value', 'Enregistrer les modifications');
+
+////////context
+var s = document.getElementById("s");
+var modifier = document.getElementById("modifier");
 
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -146,29 +154,60 @@ document.addEventListener('DOMContentLoaded', function () {
             cy.remove(selected);
         }
     });
-/*
 
-    cy.on("select", function (event) {
-        if (selected === null) return;
-        if (!connectActivated) {
-            if (selected.isNode() || selected.isEdge()) {
-                alert("id :" + selected.id() + " label : " + selected.data("label") + " title : " + selected.data("title"));
-            }
+    s.addEventListener("click", event => {
+       // if (selected === null) return;
+        if (selected.isNode() || selected.isEdge()) {
+            id--;
+            cy.remove(selected);
         }
-
     });
-*/
+
+
+//menu contextuel
+
+cy.on("select", function (event) {
+    if (selected === null) return;
+
+    if (!connectActivated) {
+        if (selected.isNode() || selected.isEdge()) {
+
+                window.addEventListener("contextmenu",function(event){
+                    event.preventDefault();
+                    var contextElement = document.getElementById("context-menu");
+                    contextElement.style.top = event.offsetY + "px";
+                    contextElement.style.left = event.offsetX + "px";
+                    contextElement.classList.add("active");
+                  });
+                  window.addEventListener("click",function(){
+                    document.getElementById("context-menu").classList.remove("active");
+                  });
+
+
+        }
+    }
+
+}
+
+);
+
+    
+
     //editer
     edit.addEventListener("click", event => {
 
         if (selected === null) {
-            alert("Veillez selectionner l'element à modifier !")
+            alert("Veuillez selectionner l'element à modifier !")
         }
-        else {
+          
+        else  {
+            if(v==false){
+            v=true;
             const cles = Object.keys(selected.data());
             const valeurs = Object.values(selected.data());
             for (var i = 0; i < cles.length; i++) {
                 var elem2 = document.createElement("P");
+             elem2.setAttribute('class', 'champs');
                 elem2.innerText = cles[i];
                 var input = document.createElement("input");
                 input.setAttribute('type', 'text');
@@ -177,42 +216,111 @@ document.addEventListener('DOMContentLoaded', function () {
                 input.setAttribute('class', 'input');
 
                 //  var parent = document.getElementById("madiv");
-                modal.appendChild(elem2);
+                //noms des champs 
+               modal.appendChild(elem2);
 
-                modal.appendChild(input);
+               modal.appendChild(input);
+
             }
 
             modal.appendChild(bouttonModif);
             // Si on clique sur modifier le modal s'ouvre
             modal.style.display = "block";
-
-
-
+            
 
         }
 
-
+    }
 
     });
+
+    modifier.addEventListener("click", event => {
+
+        if (selected === null) {
+            alert("Veuillez selectionner l'element à modifier !")
+        }
+          
+        else  {
+            if(v==false){
+            v=true;
+            const cles = Object.keys(selected.data());
+            const valeurs = Object.values(selected.data());
+            for (var i = 0; i < cles.length; i++) {
+                var elem2 = document.createElement("P");
+             elem2.setAttribute('class', 'champs');
+                elem2.innerText = cles[i];
+                var input = document.createElement("input");
+                input.setAttribute('type', 'text');
+                input.setAttribute('id', cles[i]);
+                input.setAttribute('value', valeurs[i]);
+                input.setAttribute('class', 'input');
+
+                //  var parent = document.getElementById("madiv");
+                //noms des champs 
+               modal.appendChild(elem2);
+
+               modal.appendChild(input);
+
+            }
+
+            modal.appendChild(bouttonModif);
+            // Si on clique sur modifier le modal s'ouvre
+            modal.style.display = "block";
+            
+
+        }
+
+    }
+
+    });
+
+
+
+
+
+
 
     // Si on clique sur enregistrer les modifications le modal se ferme
 
     bouttonModif.addEventListener("click", event => {
+        v=false;
         const cles = Object.keys(selected.data());
-        for (var i = 0; i < cles.length; i++) {
+      for (var i = 0; i < cles.length; i++) {
 
             selected.data(cles[i], document.getElementById(cles[i]).value);
         }
-
+       
         selected = null;
         modal.style.display = "none";
-        while (modal.firstChild) {
+      while (modal.firstChild) {
             modal.removeChild(modal.firstChild);
+
         }
 
-
+        
+       
     });
+
+
     //fin Modification
+    
+   // var span = document.getElementsByClassName("close")[0];
+
+        span.addEventListener("click", event=>{
+            modal.style.display = "none";
+            selected = null;
+            v=false;
+            while (modal.firstChild) {
+                modal.removeChild(modal.firstChild);
+    
+            }
+        });
+   
+
+  //
+
+
+
     //regroupement
 
     var cdnd = cy.compoundDragAndDrop();
@@ -304,3 +412,4 @@ function menuBtnChange() {
         closeBtn.classList.replace("bx-menu-alt-right", "bx-menu");//replacing the iocns class
     }
 }
+//menu 

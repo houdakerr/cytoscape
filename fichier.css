@@ -1,3 +1,9 @@
+@font-face{
+  font-family: 'polic';
+src: url('font/Hello Valentina.ttf') format('TrueType');
+}
+
+
 #cy {
   position: absolute;
   z-index: 1;
@@ -13,7 +19,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins" , sans-serif;
+  /*font-family: "Poppins" , sans-serif;*/
 }
 .sidebar{
   position: fixed;
@@ -185,17 +191,108 @@
   }
 }
 
+/* BEGIN CSS de MODAL*/
+/* input de  modal*/
+.input{
+  padding: 8px;
+  border-radius: 5px;
+  border: var(#3327b8c5); 
+  height: auto;
+  width: auto;
+}
+/* boutton enrigestrer modification -modal*/
+#soumettre{ 
+  font-size: 20px;
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  border-radius: 3px;
+transition: all 1s;
+color:white;  
+background:  linear-gradient(rgba(2, 2, 63, 0.842));
+margin-left: 60px;
+}
+#soumettre:hover{
+  color:rgba(2, 2, 63, 0.842);
+	text-decoration: none;
+}
+/* les champs de modal*/
+.champs{padding-bottom: 10px; padding-top: 8px; }
+
+
 .modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  margin-left: 10%;
-  margin-top: 5%;
-  width: 25%; /* Full width */
-  height: 25%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  justify-self: right;
+  justify-content: space-between;
+  z-index: 1;
+  border-radius: 10px;
+  padding-left: 40px;
+  padding-top: 10px;
+  margin-top: 0;
+
+  /*margin-left: 800px;*/
+  width: auto;
+  height: 100%;
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  overflow: auto; 
+ /* background-color: rgba(77, 5, 5, 0.904); */
+ font-style: 'polic'; 
+ border-color: black;
+ right: 0;
+
+  
 } 
+
+
+.linear-gradient {
+  background: linear-gradient( rgb(2, 2, 63),white , rgb(2, 2, 63) );
+}
+
+ .close {
+  color:white;
+  float: right;
+  font-size: 30px;
+  font-weight: bold;
+}
+.close:hover,
+.close:focus {
+  color: red;
+  text-decoration: none;
+  cursor: pointer;
+}
+#titre{font-family: polic; font-size: 40px; color: white;} 
+
+/* menu context */
+
+#context-menu {
+  position:fixed;
+  z-index:10000;
+  width:200px;
+  background:#1b1a1a;
+  border-radius:5px;
+  transform:scale(0);
+  transform-origin:top left;
+}
+#context-menu.active {
+  transform:scale(1);
+  transition:transform 300ms ease-in-out;
+}
+#context-menu .item {
+  padding:8px 10px;
+  font-size:15px;
+  color:#eee;
+}
+#context-menu .item:hover {
+  background:#555;
+}
+#context-menu .item i {
+  display:inline-block;
+  margin-right:5px;
+}
+#context-menu hr {
+  margin:2px 0px;
+  border-color:#555;
+}
 
 

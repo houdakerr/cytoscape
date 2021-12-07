@@ -18,6 +18,25 @@
 <script src="graph.json"></script>
 
 <body>
+  <div id="context-menu">
+    <div class="item"  id="afficher">
+      <i class="fa fa-cut"></i> Afficher Contenu
+    </div>
+    
+    <div class="item" id="modifier" >
+      <i class="fa fa-clone"></i> Modifier Noeud
+    </div>
+
+    <div class="item" id="s">
+      <i class="fa fa-paste"></i> Supprimer Noeud
+    </div>
+
+    <div class="item" id="exit">
+      <i class="fa fa-times"></i> Quitter
+    </div>
+  </div>
+
+
 
 
   <div class="cytoscape-content">
@@ -80,17 +99,29 @@
 
 
     </ul>
-    <!--menu-->
+    <!--menu contextuel -->
 
   </div>
-  <div id="madiv" class="modal">
+ 
 
+
+
+  <!-- Modal-->
+  <div id="madiv" class="modal linear-gradient text-right" >
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <p  id="titre" style="text-align: center;">Modifications</p>
+    </div>
   </div>
   <!--menu left-->
-
+  
   <script src="fichier.js"></script>
 
-
+ 
+  <script src="Assets/jquery/jquery.min.js"></script>
+  <script src="Assets/js/bootstrap.min.js"></script>
+  
+  
 </body>
 
 </html>

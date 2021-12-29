@@ -4,6 +4,8 @@
   <meta name="author" content="Manuele Kirsch Pinheiro">
   <link type="text/css" rel="stylesheet" href="fichier.css">
   <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+  <!--script src="https://cdnjs.cloudflare.com/ajax/libs/cytoscape/3.2.22/cytoscape.js"></script>-->
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/cytoscape/2.4.4/cytoscape.min.js"></script>
   <script src="https://unpkg.com/cytoscape-undo-redo@2.4.4/cytoscape-undo-redo.js"></script>
   <script src="https://unpkg.com/dagre@0.7.4/dist/dagre.js"></script>
@@ -12,12 +14,15 @@
   <script src="cytoscape-compound-drag-and-drop.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.5.7/shim.min.js"></script>
-  <script src="https://unpkg.com/layout-base/layout-base.js"></script>
-  <script src="https://unpkg.com/cose-base/cose-base.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/cytoscape-cose-bilkent@4.1.0/cytoscape-cose-bilkent.min.js"></script>
-  <script src="https://unpkg.com/cytoscape-dagre@2.2.2/cytoscape-dagre.js"></script>
-  <title> CytoProject </title>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.5.7/shim.min.js"></script>
+<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/cytoscape-cose-bilkent@4.1.0/cytoscape-cose-bilkent.min.js"></script>
+
+ <script src="https://unpkg.com/cytoscape-dagre@2.2.2/cytoscape-dagre.js"></script>
+  <title> Nouveau graphe </title>
 
 </head>
 <script src="graph.json"></script>
@@ -39,6 +44,7 @@
       <li id="rech">
         <i class='bx bx-search'></i>
         <input type="text" placeholder="Search..." value="">
+      <!-- <button type="button" onclick="getValue();">hhh--> 
         <span class="tooltip" id="loop">Search</span>
       </li>
 
@@ -78,7 +84,8 @@
         </a>
         <span class="tooltip">Modifier</span>
       </li>
-     <!--new graphe-->
+
+      <!-- Nouveau graphe-->
       <li>
         <a id="add_graphe" href="nouveau_graphe.html" target="_blank">
           <i class='bx bxs-duplicate'></i>
@@ -87,7 +94,7 @@
         <span class="tooltip">Nouveau graphe </span>
       </li>
 
-   <!--animations-->
+<!-- Animation-->
    <li>
      <a id="layoutButton">
       <i class='bx bx-shape-polygon'></i>
@@ -96,25 +103,23 @@
     <span class="tooltip">Animations </span>
    </li>
 
-
-  </ul>
-
-
-  </div>
+</ul>
+</div>
  
 
 
 
-  <!-- Modal pour modification-->
+  <!-- Modal modification-->
   <div id="madiv" class="modal linear-gradient text-right" >
     <div class="modal-content">
-
+    <!--  <span class="close">&times;</span>-->
+    <!--  <p  id="titre" style="text-align: center;">Modifications</p>-->
     </div>
   </div>
-
-  <!--Modal pour affichage-->
+  <!--Modal affichage-->
   <div id="madiv2" class="modal linear-gradient text-right" >
     <div class="modal-content">
+    
     </div>
   </div>
  
@@ -136,7 +141,7 @@
 
   
 
-  <script src="fichier.js"></script>
+  <script src="nouveau_graphe.js"></script>
   <script src="Assets/jquery/jquery.min.js"></script>
   <script src="Assets/js/bootstrap.min.js"></script>
   <script src="https://code.jquery.com/jquery-2.1.4.js"></script>

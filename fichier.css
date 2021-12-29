@@ -2,16 +2,25 @@
   font-family: 'polic';
 src: url('font/Hello Valentina.ttf') format('TrueType');
 }
+@font-face{
+  font-family: 'font';
+src: url('font/Mbkaos.ttf') format('TrueType');
+}
 
 
 #cy {
-  position: absolute;
+  position: fixed;
   z-index: 1;
   top: 0;
-  left: 100;
+  left: 0;
   right: 0;
   bottom: 0;
+  /*background-color: #11101d*/
 }
+/*[label~=node]{background-color: red;}
+#cy.node{
+  background-color: #0400fa;
+}*/
  /* Sidebar Styles */
   
  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
@@ -194,43 +203,116 @@ src: url('font/Hello Valentina.ttf') format('TrueType');
 /* BEGIN CSS de MODAL*/
 /* input de  modal*/
 .input{
-  padding: 8px;
-  border-radius: 5px;
-  border: var(#3327b8c5); 
-  height: auto;
-  width: auto;
+  background-color:rgba(11, 4, 39, 0.959) ;
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 1px solid white;
+  color: white;
 }
 /* boutton enrigestrer modification -modal*/
-#soumettre{ 
-  font-size: 20px;
+
+#soumettre, #annuler, #fermer , #btnAdd{ 
+  position: relative;
+  display: inline-block;
+  padding: 10px 10px;
+  margin-top: 5px;
+  margin-left: 100px;
+
+  /*margin-right: 80px;*/
+  margin-bottom: 15px;
+  color: #0400fa;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: 0.5s;
+  letter-spacing: 2px;
+  overflow: hidden;
+  text-align: center;
+
+
+  /*font-size: 15px;
   display: inline-block;
   margin-top: 15px;
-  padding: 10px 20px;
+  padding: 10px 10px;
   border-radius: 3px;
-transition: all 1s;
-color:white;  
-background:  linear-gradient(rgba(2, 2, 63, 0.842));
-margin-left: 60px;
+  transition: all 1s;
+ /* font-family: 'font';
+  color: white;  
+  /*background:  linear-gradient(rgba(2, 2, 63, 0.842));
+  margin-left: 80px;
+  background-color: #76759ec5 ;
+  border: white solid 2px;
+  text-align: center;*/
 }
-#soumettre:hover{
+#soumettre:hover, #annuler:hover, #fermer:hover, #btnAdd:hover{
+  background: #081875;
+  color: #fff;
+  box-shadow: 0 0 5px #0b0338,
+              0 0 10px #d4dbdb,
+              0 0 20px #e2ded9,
+              0 0 10px #f8f5f3;
+   -webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
+}/*
+a:nth-child(1){
+  filter: hue-rotate(270deg);
+}
+a:nth-child(2){
+  filter: hue-rotate(110deg);
+}
+a span{
+  position: absolute;
+  display: block;
+}
+a span:nth-child(1){
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg,transparent,#04033f);
+  animation: animate1 1s linear infinite;
+}
+  */
+  
+  
+  /*
   color:rgba(2, 2, 63, 0.842);
-	text-decoration: none;
-}
+	text-decoration: none;*/
+
 /* les champs de modal*/
-.champs{padding-bottom: 10px; padding-top: 8px; }
+.champs{
+  padding-bottom: 10px; 
+  padding-top: 8px;  
+  font-family: 'font';
+  font-style: bold;
+  color: white; 
+  font-size: 18px;
+}
+/*   */
+#newLabel, #newInput{
+  background-color:rgba(11, 4, 39, 0.959) ;
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 1px solid white;
+  color: white;
+}
 
-
-.modal {
+.modal, .modal2 {
   justify-self: right;
   justify-content: space-between;
   z-index: 1;
   border-radius: 10px;
-  padding-left: 40px;
+  padding-left: 10px;
+  padding-right: 10px;
   padding-top: 10px;
   margin-top: 0;
 
   /*margin-left: 800px;*/
-  width: auto;
+  width: 30%;
   height: 100%;
   display: none; 
   position: fixed; 
@@ -241,13 +323,14 @@ margin-left: 60px;
  border-color: black;
  right: 0;
 
-  
+  background-color: rgba(11, 4, 39, 0.959);
+/*  box-shadow: inset 0 0 1em rgba(0, 47, 255, 0.438);*/
 } 
 
-
+/*
 .linear-gradient {
   background: linear-gradient( rgb(2, 2, 63),white , rgb(2, 2, 63) );
-}
+}*/
 
  .close {
   color:white;
@@ -261,7 +344,8 @@ margin-left: 60px;
   text-decoration: none;
   cursor: pointer;
 }
-#titre{font-family: polic; font-size: 40px; color: white;} 
+/* le titre de modal*/
+#titre, #titre2{font-family: polic; font-size: 40px; color: white; margin-left: 100px; text-align: centre;} 
 
 /* menu context */
 

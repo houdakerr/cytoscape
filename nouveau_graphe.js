@@ -73,13 +73,12 @@ document.addEventListener('DOMContentLoaded', function () {
                     'label': 'data(label)',
                    'color': "black",
                    'text-outline-color': ' black',
-                   'font-size': '30px',
+                   'font-size': '15px',
                    'font-style': 'bold',
-
                    'text-outline-width':1,
                 
-                    'width': '80px',
-                    'height':'80px',
+                    'width': '30px',
+                    'height':'30px',
                    
        
         'z-index': -1,
@@ -161,7 +160,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
   
         
-        elements: graph2,
+        elements: {
+
+            nodes:[],
+            edges: []
+        },
       
         
         /*{
@@ -184,7 +187,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 //ajout d'un noeud au graphe
 
-    var id = 28;
+    var id = 1;
     add.addEventListener("click", event => {
         // addActivated = true;
         var top = Math.random();
